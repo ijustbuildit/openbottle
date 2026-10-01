@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>HydroCap</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+		<string>bluetooth-le</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<!-- Bluetooth: the cap is only reachable over BLE. -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>HydroCap connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log. Nothing leaves your iPhone.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>HydroCap connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log.</string>
+
+	<!-- Apple Health: drink events are written as dietary water samples; weight
+	     and biological sex are read to estimate the daily water target. -->
+	<key>NSHealthShareUsageDescription</key>
+	<string>HydroCap reads your weight and biological sex from Apple Health to suggest an adjustable drink goal. Missing values can be entered manually or skipped. HydroCap has no account or server.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>HydroCap writes the drink events it derives from your bottle into Apple Health as dietary water.</string>
+
+	<!-- Background work: bluetooth-central keeps the cap connection alive and
+	     lets iOS wake us when the cap advertises; fetch/processing are for the
+	     BGAppRefreshTask trigger. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>dev.hydrocap.refresh</string>
+	</array>
+
+	<!-- Debug hooks without a cable: hydrocap://sync, //scan, //tof, //read-reminder,
+	     //read-all-settings, //set-reminder?…, //set-dnd?… (Debug builds react, release
+	     builds ignore them). -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>dev.hydrocap.app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hydrocap</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

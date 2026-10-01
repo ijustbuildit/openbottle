@@ -1,0 +1,256 @@
+// HydroCap wire schema for LARQ-family bottle caps.
+//
+// Written from scratch from docs/protocol/ble-protocol.md (clean room, see
+// docs/legal/notes.md). Field numbers and scalar types are the interface and
+// must stay wire-compatible with the cap firmware. Message names must match the
+// unqualified names used in google.protobuf.Any type URLs
+// ("type.googleapis.com/<MessageName>") because the cap dispatches on them,
+// which is why this file intentionally has NO `package` statement.
+//
+// Enum value names never reach the wire; only their numbers matter. Values we
+// have not observed are left undefined and surface as UNRECOGNIZED(<number>).
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+option java_package = "dev.hydrocap.app.proto";
+option java_multiple_files = true;
+option java_outer_classname = "HydroCapProto";
+
+// ---------------------------------------------------------------------------
+// Envelope
+// ---------------------------------------------------------------------------
+
+enum CapEnumResponseCode {
+  FAIL = 0;
+  SUCCESS = 1;
+  NOT_SUPPORTED = 2;
+}
+
+message CapBleRequest {
+  fixed32 requestId = 1;
+  google.protobuf.Any body = 2;
+}
+
+message CapBleResponse {
+  fixed32 requestId = 1;
+  CapEnumResponseCode code = 2;
+  google.protobuf.Any body = 3;
+}
+
+// ---------------------------------------------------------------------------
+// Time
+// ---------------------------------------------------------------------------
+
+message CapTimeSettings {
+  // Unix epoch milliseconds.
+  uint64 timeInMillisec = 1;
+}
+
+message RequestSetCapTimeSettings {
+  CapTimeSettings settings = 1;
+}
+
+message RequestGetCapTimeSettings {}
+
+message ResponseGetCapTimeSettings {
+  CapTimeSettings settings = 1;
+}
+
+// ---------------------------------------------------------------------------
+// UI state
+// ---------------------------------------------------------------------------
+
+// Observed values only; the firmware knows 0..18.
+enum CapEnumUiState {
+  UI_STATE_UNSPECIFIED = 0;
+  UI_STATE_BATTERY_LOW = 7;
+  UI_STATE_CHARGING = 8;
+  UI_STATE_CHARGED = 9;
+  UI_STATE_ALL_OFF = 15;
+}
+
+// Golden vector + hardware session both show OFF encoded as 1.
+enum CapPowerSavingMode {
+  POWER_SAVING_MODE_UNSPECIFIED = 0;
+  POWER_SAVING_MODE_OFF = 1;
+}
+
+message RequestGetCapUiState {}
+
+message ResponseGetCapUiState {
+  CapEnumUiState state = 1;
+  CapPowerSavingMode powerSavingMode = 2;
+}
+
+// ---------------------------------------------------------------------------
+// ToF (time-of-flight distance sensor)
+// ---------------------------------------------------------------------------
+
+enum CapEnumTofMode {
+  DISPLAY_MODE_UNSPECIFIED = 0;
+  DISPLAY_MODE_EVENT = 2;
+}
+
+message CapTofSettings {
+  CapEnumTofMode mode = 1;
+  bool isIntervalTriggerEnabled = 2;
+  fixed32 triggerIntervalInSec = 3;
+  fixed32 accelerometerCheckIntervalInSec = 4;
+  fixed32 bottleSizeInMilliliter = 5;
+  fixed32 accelerometerTimeoutInSec = 6;
+}
+
+message RequestGetCapTofSettings {}
+
+message ResponseGetCapTofSettings {
+  CapTofSettings settings = 1;
+}
+
+message CapTofState {
+  fixed32 distanceInMillimeter = 1;
+  fixed32 kcps = 2;
+}
+
+message RequestGetCapTofState {}
+
+message ResponseGetCapTofState {
+  CapTofState state = 1;
+}
+
+// ---------------------------------------------------------------------------
+// Logs
+// ---------------------------------------------------------------------------
+
+enum CapEnumLogQuerySearchAlgo {
+  SEARCH_ALGO_TIMESTAMP = 0;
+}
+
+message CapLogQuery {
+  // Unix epoch seconds; the cap returns entries with timestamp > fromTimestamp.
+  uint64 fromTimestamp = 1;
+  fixed32 limit = 2;
+  CapEnumLogQuerySearchAlgo algo = 3;
+}
+
+enum CapEnumTofTriggerType {
+  TYPE_UNSPECIFIED = 0;
+  TYPE_INTERVAL = 1;
+  TYPE_CAP = 2;
+  TYPE_CAP_ON_FLAP_OPEN_SIP = 4;
+}
+
+message CapTofLog {
+  // Unix epoch seconds.
+  uint64 timestamp = 1;
+  CapEnumTofTriggerType triggerType = 2;
+  fixed32 distanceInMillimeter = 3;
+  fixed32 kcps = 4;
+  float uvLedTempInOhm = 5;
+}
+
+message RequestGetCapTofLog {
+  CapLogQuery query = 1;
+}
+
+message ResponseGetCapTofLog {
+  repeated CapTofLog items = 1;
+}
+
+enum CapEnumUvActivationMode {
+  UV_ACTIVATION_MAINTENANCE = 0;
+}
+
+message CapActivationLog {
+  // Unix epoch seconds.
+  uint64 timestamp = 1;
+  CapEnumUvActivationMode mode = 2;
+  fixed32 batterySocInPercentage = 3;
+}
+
+message RequestGetCapActivationLog {
+  CapLogQuery query = 1;
+}
+
+message ResponseGetCapActivationLog {
+  repeated CapActivationLog items = 1;
+}
+
+// ---------------------------------------------------------------------------
+// Hydration reminder (LED ring)
+// ---------------------------------------------------------------------------
+
+enum CapEnumHydroReminderState {
+  REMINDER_STATE_OFF = 0;
+  REMINDER_STATE_INTERVAL_FIXED = 1;
+  REMINDER_STATE_INTERVAL_ADAPTIVE = 2;
+}
+
+message CapColor {
+  // Components in 0..1.
+  float red = 1;
+  float green = 2;
+  float blue = 3;
+  float alpha = 4;
+}
+
+message CapHydroReminderSettings {
+  CapEnumHydroReminderState state = 1;
+  // Seconds of day, 1..86400.
+  fixed32 startTimeInSec = 2;
+  fixed32 stopTimeInSec = 3;
+  fixed32 intervalInSec = 4;
+  CapColor color = 5;
+}
+
+message RequestGetCapHydroReminderSettings {}
+
+message RequestSetCapHydroReminderSettings {
+  CapHydroReminderSettings settings = 1;
+}
+
+message ResponseGetCapHydroReminderSettings {
+  CapHydroReminderSettings settings = 1;
+}
+
+// ---------------------------------------------------------------------------
+// Do not disturb
+// ---------------------------------------------------------------------------
+
+enum CapEnumDoNotDisturbState {
+  DND_STATE_OFF = 0;
+  DND_STATE_ON = 1;
+  DND_STATE_AUTO = 2;
+}
+
+message CapDoNotDisturbSettings {
+  CapEnumDoNotDisturbState state = 1;
+  fixed32 startTimeInSec = 2;
+  fixed32 stopTimeInSec = 3;
+  fixed32 snoozeTimeInMinutes = 4;
+}
+
+message RequestGetCapDoNotDisturbSettings {}
+
+message RequestSetCapDoNotDisturbSettings {
+  CapDoNotDisturbSettings settings = 1;
+}
+
+message ResponseGetCapDoNotDisturbSettings {
+  CapDoNotDisturbSettings settings = 1;
+}
+
+// ---------------------------------------------------------------------------
+// Low battery (read-only for HydroCap)
+// ---------------------------------------------------------------------------
+
+message CapLowBatterySettings {
+  fixed32 alertThresholdInPercentage = 1;
+  fixed32 lockoutThresholdInPercentage = 2;
+}
+
+message RequestGetCapLowBatterySettings {}
+
+message ResponseGetCapLowBatterySettings {
+  CapLowBatterySettings settings = 1;
+}

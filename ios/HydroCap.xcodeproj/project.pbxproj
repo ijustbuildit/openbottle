@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040EBA62B528458FFC3353A1 /* BackgroundTaskGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B24095849E8B45BCB44F3 /* BackgroundTaskGuard.swift */; };
+		0A123A22A07CE12B9F7579B3 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81000BAEEC89D562E52FCF63 /* DebugLog.swift */; };
+		0ED15FAF53A922A92F6A72EF /* DrinkEventBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3A31C289878D3AE2F6723 /* DrinkEventBuilder.swift */; };
+		0F339F623132CFC8962DED56 /* BottleProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A698438D63A4D6367E059063 /* BottleProfile.swift */; };
+		0FB7EB53FFC789FFB0FD5507 /* ConnectionHandoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9090D61DA78BE41B044CDD4 /* ConnectionHandoff.swift */; };
+		100FF4525C46381E9C463866 /* DrinkReminderPlannerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6FD154D17BFA8B10D9240 /* DrinkReminderPlannerTest.swift */; };
+		177E56DDAC1D720593AD46AC /* DrinkReminderCalendarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B44505D857C903F61A4CEC /* DrinkReminderCalendarTest.swift */; };
+		1BC88DAFABC940FEDD6E6D3E /* NotificationReassemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBE80447D97AF4A26B4094 /* NotificationReassemblerTest.swift */; };
+		1C08FAC2B5B1BC4233FBB1DE /* DrinkReminderQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BA85A5A770D64D66D2D70 /* DrinkReminderQueueTest.swift */; };
+		21253E26C09F9DD9FF238378 /* CapUuidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB63E80B27414A4052FE7F /* CapUuidsTests.swift */; };
+		29002127F37F6064C6649ADC /* BatteryNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD3D757900A637D87ED754 /* BatteryNotifier.swift */; };
+		2950A2D2B2268F94388177D6 /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB77B85E471044E3444370 /* Records.swift */; };
+		2AED4A24EFC109BD41D1CD2E /* NotificationReassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BAA412C1918772F942569 /* NotificationReassembler.swift */; };
+		2D772DE04C4FF52610FE1388 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2233574262D69B09EC282B /* SyncEngine.swift */; };
+		2DA69344C85F98245C0792EC /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB0FC821ABC8448564C102 /* TestSupport.swift */; };
+		2E22D321392D9B5F87983F4A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F157F825ADE17102359F3F5 /* HistoryView.swift */; };
+		2F226AC738F4AA9015C6DA29 /* AsyncWaiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A3CCB3A5AA68616B88FCE /* AsyncWaiter.swift */; };
+		37696F5D1AF34114A613115D /* NusChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384AF72211839E493CE1E82 /* NusChannel.swift */; };
+		396BA7C68B86F3808A6F924B /* ReminderRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AC5964D3E6D818C0A79A1 /* ReminderRulesTest.swift */; };
+		3A787F4059D6F60F1606E62A /* DrinkReminderQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8F8E2EA319C32338211 /* DrinkReminderQueue.swift */; };
+		3C291B03304A1D0D6F7E5A00 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A2705C812BF634C059EDE9 /* HomeView.swift */; };
+		4359BBCC00BB1673BBD4B4F4 /* DebugActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25706A401C3FC21D795C3BCD /* DebugActions.swift */; };
+		497C36ED7644CCEC0155E496 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35934E54A6D64CB1747AEE59 /* AppModel.swift */; };
+		4A108F33D146319A55FCE183 /* BottleProfileCalibrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0C6BD77E5BA95B8EE91A2 /* BottleProfileCalibrationTest.swift */; };
+		4C35E1E2E4F406A9BDA3AB7D /* ProtoWire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4793C986637CEBE18164F0D1 /* ProtoWire.swift */; };
+		4CF27306F91FC56AC3F9E805 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D3E7A17B9BF6D9346B5B2 /* Hex.swift */; };
+		4EF66452BC992CE957600579 /* RequestIdCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4652092C3E34D811BD09D98 /* RequestIdCounter.swift */; };
+		4F9165CA1427B27BA1D8CBCD /* HydrationRecordSyncTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C8FB097D6334270801DD5C /* HydrationRecordSyncTest.swift */; };
+		57C7F238E96C77684137EDCB /* BatteryAlertPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3CFEA585F8608ACB626496 /* BatteryAlertPolicy.swift */; };
+		58B90B1210353EC068A942FA /* CapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37697C26563DCBA0C2A4F30A /* CapClient.swift */; };
+		5A45BD5EE282B5FDFD0C723E /* InMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F694E65D5CC24FA4E3B9A7E /* InMemoryStore.swift */; };
+		5C5E00912AAC18706B981935 /* ConnectionHandoffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BA23C75F664B75DC3E9AFF /* ConnectionHandoffTests.swift */; };
+		61206720987B70464B28E6A7 /* UXSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD544EC1587C22EE8FBFF /* UXSettingsTest.swift */; };
+		61546300242F2454587389B9 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B127564A1277A2FEC769F /* AppContainer.swift */; };
+		6256B5C7DA18BFB1B4B2ABE9 /* BackgroundRunPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209336446FF7CA6ED0B7490 /* BackgroundRunPolicy.swift */; };
+		6A89B5FB2C5AC9752252A192 /* HistoryAggregationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C358B1F7FFC6F21A32F76D5 /* HistoryAggregationTest.swift */; };
+		75D130D41DE392B38A82704B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBC4B3E521D61630FE78EB /* SettingsView.swift */; };
+		7861E70B3F9ECEF141A1980D /* SyncErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199D1DA5373CD193014ABD /* SyncErrors.swift */; };
+		7DF194A919FEECF082803F71 /* Gauges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1197ED982F62DBE67A24AE3 /* Gauges.swift */; };
+		7F677386A2A03D2676A42832 /* CommandAllowlistTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE0E00D8CC16EA2254DB597 /* CommandAllowlistTest.swift */; };
+		90732497E940ACB48F6E181A /* CapCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7F3BDF6BC1E9D1290B6CE /* CapCodec.swift */; };
+		96E2990D1C73316059F663DC /* BleScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07E20C986AA391227125E3 /* BleScanner.swift */; };
+		9A20AF75AEA597C1BB9D5C1A /* DeviceNameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A1141AE70E7F820F30F472 /* DeviceNameTest.swift */; };
+		9B7515B12A8799824FFFFD28 /* DrinkReminderPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C803AA911D447E2BB7AC7E /* DrinkReminderPlanner.swift */; };
+		9B8E21A64CD5D6E72AF776D8 /* DiscoveredCap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE3428C535AA0B343BCEB5E /* DiscoveredCap.swift */; };
+		9C37D09CC73C6C5ACD44DDAA /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15EAB70A3FD889D6E12E02E /* DebugView.swift */; };
+		9D792E95D498D7840DD82E66 /* DeviceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A53B42D15E87777D085B764 /* DeviceName.swift */; };
+		A0C8F43BA1FBC35481A13AE7 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3ED935CF02CFC66113D54 /* ConnectionState.swift */; };
+		A4E7D8258CB6D0B7D569DB6E /* HydrationTargetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13517E4B67EA21142B069BE6 /* HydrationTargetTest.swift */; };
+		A770B4F1D2FC94E9CBFD4C4A /* CapConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6341D49D384FD8AA3E3BE812 /* CapConnection.swift */; };
+		A9122D74B2CD14B806FDEFD5 /* HistoryAggregation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DD00489A182EA65E2875E /* HistoryAggregation.swift */; };
+		AA40B00EE6CBAF4892CCF093 /* ProtocolGoldenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED730C4F46F9B1FE52B0501 /* ProtocolGoldenTest.swift */; };
+		AC7650D787CE7F369B36BFBD /* CapCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DFFF3AB728A7F68FD0D46 /* CapCommand.swift */; };
+		AEDA18E3FF6CBABBD5C585B1 /* DrinkReminderScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D7A7FD62EF9931FBD697F8 /* DrinkReminderScheduler.swift */; };
+		B205CD7F7CE5B808A7920414 /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A9BA0D97EBB0CE9B1FE1C /* SwiftDataModels.swift */; };
+		BAB2B57BDB2EE5B993BD99C4 /* BackgroundRunPolicyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26FDB03D65BED763E3CE5A /* BackgroundRunPolicyTest.swift */; };
+		BCBE2CE5A301B122EC9D37A0 /* TofAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747A9C87BEDBB677AF62577 /* TofAlgorithm.swift */; };
+		BD9336EF62410C471666B01B /* CaptureVectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99996752D7C4563B586034D3 /* CaptureVectorTest.swift */; };
+		BE6CEA8D24EDB55E42051DAB /* CapUuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF357830EDE82D153C5C25A /* CapUuids.swift */; };
+		C08EAA7D1542FCFFA253EB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC47467BCF539A1B6D349C0 /* Assets.xcassets */; };
+		C368234EA86314C1BFC8D770 /* HydrationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC796114C421AD8D148EDE6 /* HydrationTarget.swift */; };
+		C92C546CBE52800270AF7389 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AB1B6EF1CE541E66EA6FCC /* OnboardingView.swift */; };
+		CA98DF5183A89467F4301C22 /* DebugRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A43041355C1F825A67411D /* DebugRoute.swift */; };
+		D037A5212D4830E0E08DB8BB /* HydroCapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08859612ED5C6489A6B44D0D /* HydroCapApp.swift */; };
+		D06D81B599AD6E1F6D788977 /* CapCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310AF1437B348F83444D9A4 /* CapCentral.swift */; };
+		D3EDB6038CDD1F31ECE62F71 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE4FD2577E6600FF6E2340 /* ReminderView.swift */; };
+		D7B9E7ACECB6C74823486746 /* DebugRouteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56BCF36C3618B33FDCF545C /* DebugRouteTest.swift */; };
+		D9B094503577950408BC7318 /* ReminderMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666641E330FE7A722BEF1E6 /* ReminderMapping.swift */; };
+		DF512511B259D16D7B79CC27 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED22607B58C466332FBC31 /* Messages.swift */; };
+		E46470DC5D38228179315605 /* ReminderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8AF291885DFFACB88C4D0 /* ReminderConfig.swift */; };
+		EB79DA6B74A0630C80071E41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C84BB12CF096640FE66A96 /* Settings.swift */; };
+		F02B16B51DFAEBF0C57D2A09 /* BackgroundSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DAFE65C9643125295F577 /* BackgroundSync.swift */; };
+		F10AB5D6B5DDF137F4665AF7 /* NusChannelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95E2C2F2AA771BD9C9589B /* NusChannelTest.swift */; };
+		F221CD603481F4FBBDBB42CF /* HydrationRecordSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1334BCA9EF1EDF4DA843FA /* HydrationRecordSync.swift */; };
+		F3309633804A8D5DBABA8E54 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF500829CD33BE875DE7BEC /* RootView.swift */; };
+		F432B187E435F799DBCAEFF2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B8DAB4256CC5B652286EF /* Theme.swift */; };
+		F8140BA32986A56C0507D3FC /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16070D79971F68020DDD6C2A /* Stores.swift */; };
+		F9DCC3D6DA045CE1027D4D52 /* TofAlgorithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012DAE6F2AB3BB24E4822B94 /* TofAlgorithmTest.swift */; };
+		FA50ACC91C9EFB5E0F29D154 /* HealthKitGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C838AB7A1AEAC69499505 /* HealthKitGateway.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFDE686B3B64FE04CB6440FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2238E0FC1DFE090DF3567F3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC8B0A1BAA59D6D87127509;
+			remoteInfo = HydroCap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012DAE6F2AB3BB24E4822B94 /* TofAlgorithmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofAlgorithmTest.swift; sourceTree = "<group>"; };
+		04DBE80447D97AF4A26B4094 /* NotificationReassemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReassemblerTest.swift; sourceTree = "<group>"; };
+		050DD00489A182EA65E2875E /* HistoryAggregation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAggregation.swift; sourceTree = "<group>"; };
+		08859612ED5C6489A6B44D0D /* HydroCapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroCapApp.swift; sourceTree = "<group>"; };
+		0A53B42D15E87777D085B764 /* DeviceName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceName.swift; sourceTree = "<group>"; };
+		11D3ED935CF02CFC66113D54 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		13517E4B67EA21142B069BE6 /* HydrationTargetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationTargetTest.swift; sourceTree = "<group>"; };
+		16070D79971F68020DDD6C2A /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
+		1C358B1F7FFC6F21A32F76D5 /* HistoryAggregationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAggregationTest.swift; sourceTree = "<group>"; };
+		1C95E2C2F2AA771BD9C9589B /* NusChannelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NusChannelTest.swift; sourceTree = "<group>"; };
+		1E4BA85A5A770D64D66D2D70 /* DrinkReminderQueueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderQueueTest.swift; sourceTree = "<group>"; };
+		1F157F825ADE17102359F3F5 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		21D7A7FD62EF9931FBD697F8 /* DrinkReminderScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderScheduler.swift; sourceTree = "<group>"; };
+		23A3F755FE5CA90ED1FB9509 /* HydroCapTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HydroCapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25706A401C3FC21D795C3BCD /* DebugActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugActions.swift; sourceTree = "<group>"; };
+		29CD3D757900A637D87ED754 /* BatteryNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryNotifier.swift; sourceTree = "<group>"; };
+		35934E54A6D64CB1747AEE59 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		37697C26563DCBA0C2A4F30A /* CapClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapClient.swift; sourceTree = "<group>"; };
+		384DFFF3AB728A7F68FD0D46 /* CapCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapCommand.swift; sourceTree = "<group>"; };
+		39BA23C75F664B75DC3E9AFF /* ConnectionHandoffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandoffTests.swift; sourceTree = "<group>"; };
+		3C8DAFE65C9643125295F577 /* BackgroundSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSync.swift; sourceTree = "<group>"; };
+		3D4B24095849E8B45BCB44F3 /* BackgroundTaskGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskGuard.swift; sourceTree = "<group>"; };
+		3D6B8DAB4256CC5B652286EF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3F694E65D5CC24FA4E3B9A7E /* InMemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStore.swift; sourceTree = "<group>"; };
+		41A43041355C1F825A67411D /* DebugRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugRoute.swift; sourceTree = "<group>"; };
+		4310AF1437B348F83444D9A4 /* CapCentral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapCentral.swift; sourceTree = "<group>"; };
+		4793C986637CEBE18164F0D1 /* ProtoWire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoWire.swift; sourceTree = "<group>"; };
+		4A4C838AB7A1AEAC69499505 /* HealthKitGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitGateway.swift; sourceTree = "<group>"; };
+		4AD3A31C289878D3AE2F6723 /* DrinkEventBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkEventBuilder.swift; sourceTree = "<group>"; };
+		51A2705C812BF634C059EDE9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		51FE4FD2577E6600FF6E2340 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		5384AF72211839E493CE1E82 /* NusChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NusChannel.swift; sourceTree = "<group>"; };
+		5D2233574262D69B09EC282B /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		62A7F3BDF6BC1E9D1290B6CE /* CapCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapCodec.swift; sourceTree = "<group>"; };
+		62AB1B6EF1CE541E66EA6FCC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6341D49D384FD8AA3E3BE812 /* CapConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapConnection.swift; sourceTree = "<group>"; };
+		77A1141AE70E7F820F30F472 /* DeviceNameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameTest.swift; sourceTree = "<group>"; };
+		7C199D1DA5373CD193014ABD /* SyncErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncErrors.swift; sourceTree = "<group>"; };
+		7E07E20C986AA391227125E3 /* BleScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleScanner.swift; sourceTree = "<group>"; };
+		7FE8AF291885DFFACB88C4D0 /* ReminderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderConfig.swift; sourceTree = "<group>"; };
+		81000BAEEC89D562E52FCF63 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
+		8209336446FF7CA6ED0B7490 /* BackgroundRunPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRunPolicy.swift; sourceTree = "<group>"; };
+		84F0C6BD77E5BA95B8EE91A2 /* BottleProfileCalibrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleProfileCalibrationTest.swift; sourceTree = "<group>"; };
+		8CBB0FC821ABC8448564C102 /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		8CCBC4B3E521D61630FE78EB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8CF500829CD33BE875DE7BEC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8EC796114C421AD8D148EDE6 /* HydrationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationTarget.swift; sourceTree = "<group>"; };
+		99996752D7C4563B586034D3 /* CaptureVectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureVectorTest.swift; sourceTree = "<group>"; };
+		9B3CFEA585F8608ACB626496 /* BatteryAlertPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryAlertPolicy.swift; sourceTree = "<group>"; };
+		9C1334BCA9EF1EDF4DA843FA /* HydrationRecordSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationRecordSync.swift; sourceTree = "<group>"; };
+		9EFB77B85E471044E3444370 /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		A698438D63A4D6367E059063 /* BottleProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleProfile.swift; sourceTree = "<group>"; };
+		A9090D61DA78BE41B044CDD4 /* ConnectionHandoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandoff.swift; sourceTree = "<group>"; };
+		AB5CAB01A15D005430C9B38E /* HydroCap.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HydroCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC26FDB03D65BED763E3CE5A /* BackgroundRunPolicyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRunPolicyTest.swift; sourceTree = "<group>"; };
+		ACD6FD154D17BFA8B10D9240 /* DrinkReminderPlannerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderPlannerTest.swift; sourceTree = "<group>"; };
+		AE7BD544EC1587C22EE8FBFF /* UXSettingsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXSettingsTest.swift; sourceTree = "<group>"; };
+		BEF357830EDE82D153C5C25A /* CapUuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapUuids.swift; sourceTree = "<group>"; };
+		C1197ED982F62DBE67A24AE3 /* Gauges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauges.swift; sourceTree = "<group>"; };
+		CAFB63E80B27414A4052FE7F /* CapUuidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapUuidsTests.swift; sourceTree = "<group>"; };
+		CE4AC5964D3E6D818C0A79A1 /* ReminderRulesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRulesTest.swift; sourceTree = "<group>"; };
+		CEC47467BCF539A1B6D349C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CED730C4F46F9B1FE52B0501 /* ProtocolGoldenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolGoldenTest.swift; sourceTree = "<group>"; };
+		CFE3428C535AA0B343BCEB5E /* DiscoveredCap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredCap.swift; sourceTree = "<group>"; };
+		D3C803AA911D447E2BB7AC7E /* DrinkReminderPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderPlanner.swift; sourceTree = "<group>"; };
+		D4652092C3E34D811BD09D98 /* RequestIdCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestIdCounter.swift; sourceTree = "<group>"; };
+		D55A3CCB3A5AA68616B88FCE /* AsyncWaiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncWaiter.swift; sourceTree = "<group>"; };
+		D5C8FB097D6334270801DD5C /* HydrationRecordSyncTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationRecordSyncTest.swift; sourceTree = "<group>"; };
+		E6A7C8F8E2EA319C32338211 /* DrinkReminderQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderQueue.swift; sourceTree = "<group>"; };
+		ED9D3E7A17B9BF6D9346B5B2 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+		F15EAB70A3FD889D6E12E02E /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		F2B44505D857C903F61A4CEC /* DrinkReminderCalendarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkReminderCalendarTest.swift; sourceTree = "<group>"; };
+		F2C84BB12CF096640FE66A96 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F56BCF36C3618B33FDCF545C /* DebugRouteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugRouteTest.swift; sourceTree = "<group>"; };
+		F666641E330FE7A722BEF1E6 /* ReminderMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderMapping.swift; sourceTree = "<group>"; };
+		F747A9C87BEDBB677AF62577 /* TofAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofAlgorithm.swift; sourceTree = "<group>"; };
+		FA5B127564A1277A2FEC769F /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		FC9A9BA0D97EBB0CE9B1FE1C /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
+		FCE0E00D8CC16EA2254DB597 /* CommandAllowlistTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandAllowlistTest.swift; sourceTree = "<group>"; };
+		FE1BAA412C1918772F942569 /* NotificationReassembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReassembler.swift; sourceTree = "<group>"; };
+		FEED22607B58C466332FBC31 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		161226EBF4A6CF6189BCFCF1 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				8209336446FF7CA6ED0B7490 /* BackgroundRunPolicy.swift */,
+				3C8DAFE65C9643125295F577 /* BackgroundSync.swift */,
+				3D4B24095849E8B45BCB44F3 /* BackgroundTaskGuard.swift */,
+				A9090D61DA78BE41B044CDD4 /* ConnectionHandoff.swift */,
+				4AD3A31C289878D3AE2F6723 /* DrinkEventBuilder.swift */,
+				F666641E330FE7A722BEF1E6 /* ReminderMapping.swift */,
+				5D2233574262D69B09EC282B /* SyncEngine.swift */,
+				7C199D1DA5373CD193014ABD /* SyncErrors.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		1A10C5E4A6006B9E3A0D9723 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA5B127564A1277A2FEC769F /* AppContainer.swift */,
+				08859612ED5C6489A6B44D0D /* HydroCapApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22952909ADBC42C9A2947AA0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3F694E65D5CC24FA4E3B9A7E /* InMemoryStore.swift */,
+				9EFB77B85E471044E3444370 /* Records.swift */,
+				F2C84BB12CF096640FE66A96 /* Settings.swift */,
+				16070D79971F68020DDD6C2A /* Stores.swift */,
+				FC9A9BA0D97EBB0CE9B1FE1C /* SwiftDataModels.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2D4CCD3E296E84C126227087 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				35934E54A6D64CB1747AEE59 /* AppModel.swift */,
+				F15EAB70A3FD889D6E12E02E /* DebugView.swift */,
+				C1197ED982F62DBE67A24AE3 /* Gauges.swift */,
+				1F157F825ADE17102359F3F5 /* HistoryView.swift */,
+				51A2705C812BF634C059EDE9 /* HomeView.swift */,
+				62AB1B6EF1CE541E66EA6FCC /* OnboardingView.swift */,
+				51FE4FD2577E6600FF6E2340 /* ReminderView.swift */,
+				8CF500829CD33BE875DE7BEC /* RootView.swift */,
+				8CCBC4B3E521D61630FE78EB /* SettingsView.swift */,
+				3D6B8DAB4256CC5B652286EF /* Theme.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4331815EEB98C7B8C1CC934E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A698438D63A4D6367E059063 /* BottleProfile.swift */,
+				0A53B42D15E87777D085B764 /* DeviceName.swift */,
+				050DD00489A182EA65E2875E /* HistoryAggregation.swift */,
+				8EC796114C421AD8D148EDE6 /* HydrationTarget.swift */,
+				7FE8AF291885DFFACB88C4D0 /* ReminderConfig.swift */,
+				F747A9C87BEDBB677AF62577 /* TofAlgorithm.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		69E8266AF74EEDABC783940E = {
+			isa = PBXGroup;
+			children = (
+				CF140F358C6FA65062DD1E67 /* HydroCap */,
+				D8D46A299809ACC0D2072E27 /* HydroCapTests */,
+				AC92A1DF98C9893DA3EAC6A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82B06C7405C3B2D332E4F601 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				D55A3CCB3A5AA68616B88FCE /* AsyncWaiter.swift */,
+				7E07E20C986AA391227125E3 /* BleScanner.swift */,
+				4310AF1437B348F83444D9A4 /* CapCentral.swift */,
+				37697C26563DCBA0C2A4F30A /* CapClient.swift */,
+				6341D49D384FD8AA3E3BE812 /* CapConnection.swift */,
+				BEF357830EDE82D153C5C25A /* CapUuids.swift */,
+				11D3ED935CF02CFC66113D54 /* ConnectionState.swift */,
+				CFE3428C535AA0B343BCEB5E /* DiscoveredCap.swift */,
+				FE1BAA412C1918772F942569 /* NotificationReassembler.swift */,
+				5384AF72211839E493CE1E82 /* NusChannel.swift */,
+				D4652092C3E34D811BD09D98 /* RequestIdCounter.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		9C338DD7167228C5BF4E44E9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				62A7F3BDF6BC1E9D1290B6CE /* CapCodec.swift */,
+				384DFFF3AB728A7F68FD0D46 /* CapCommand.swift */,
+				ED9D3E7A17B9BF6D9346B5B2 /* Hex.swift */,
+				FEED22607B58C466332FBC31 /* Messages.swift */,
+				4793C986637CEBE18164F0D1 /* ProtoWire.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9D28806B09C747C5B2FF30B3 /* Notify */ = {
+			isa = PBXGroup;
+			children = (
+				9B3CFEA585F8608ACB626496 /* BatteryAlertPolicy.swift */,
+				29CD3D757900A637D87ED754 /* BatteryNotifier.swift */,
+				D3C803AA911D447E2BB7AC7E /* DrinkReminderPlanner.swift */,
+				E6A7C8F8E2EA319C32338211 /* DrinkReminderQueue.swift */,
+				21D7A7FD62EF9931FBD697F8 /* DrinkReminderScheduler.swift */,
+			);
+			path = Notify;
+			sourceTree = "<group>";
+		};
+		AC92A1DF98C9893DA3EAC6A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB5CAB01A15D005430C9B38E /* HydroCap.app */,
+				23A3F755FE5CA90ED1FB9509 /* HydroCapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C042B6AE2C654913ADC4A641 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				4A4C838AB7A1AEAC69499505 /* HealthKitGateway.swift */,
+				9C1334BCA9EF1EDF4DA843FA /* HydrationRecordSync.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		CF140F358C6FA65062DD1E67 /* HydroCap */ = {
+			isa = PBXGroup;
+			children = (
+				CEC47467BCF539A1B6D349C0 /* Assets.xcassets */,
+				1A10C5E4A6006B9E3A0D9723 /* App */,
+				82B06C7405C3B2D332E4F601 /* BLE */,
+				22952909ADBC42C9A2947AA0 /* Data */,
+				E654391E987D8E8E7C6651BF /* Debug */,
+				4331815EEB98C7B8C1CC934E /* Domain */,
+				C042B6AE2C654913ADC4A641 /* Health */,
+				9D28806B09C747C5B2FF30B3 /* Notify */,
+				9C338DD7167228C5BF4E44E9 /* Protocol */,
+				161226EBF4A6CF6189BCFCF1 /* Sync */,
+				2D4CCD3E296E84C126227087 /* UI */,
+			);
+			path = HydroCap;
+			sourceTree = "<group>";
+		};
+		D8D46A299809ACC0D2072E27 /* HydroCapTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC26FDB03D65BED763E3CE5A /* BackgroundRunPolicyTest.swift */,
+				84F0C6BD77E5BA95B8EE91A2 /* BottleProfileCalibrationTest.swift */,
+				99996752D7C4563B586034D3 /* CaptureVectorTest.swift */,
+				CAFB63E80B27414A4052FE7F /* CapUuidsTests.swift */,
+				FCE0E00D8CC16EA2254DB597 /* CommandAllowlistTest.swift */,
+				39BA23C75F664B75DC3E9AFF /* ConnectionHandoffTests.swift */,
+				F56BCF36C3618B33FDCF545C /* DebugRouteTest.swift */,
+				77A1141AE70E7F820F30F472 /* DeviceNameTest.swift */,
+				F2B44505D857C903F61A4CEC /* DrinkReminderCalendarTest.swift */,
+				ACD6FD154D17BFA8B10D9240 /* DrinkReminderPlannerTest.swift */,
+				1E4BA85A5A770D64D66D2D70 /* DrinkReminderQueueTest.swift */,
+				1C358B1F7FFC6F21A32F76D5 /* HistoryAggregationTest.swift */,
+				D5C8FB097D6334270801DD5C /* HydrationRecordSyncTest.swift */,
+				13517E4B67EA21142B069BE6 /* HydrationTargetTest.swift */,
+				04DBE80447D97AF4A26B4094 /* NotificationReassemblerTest.swift */,
+				1C95E2C2F2AA771BD9C9589B /* NusChannelTest.swift */,
+				CED730C4F46F9B1FE52B0501 /* ProtocolGoldenTest.swift */,
+				CE4AC5964D3E6D818C0A79A1 /* ReminderRulesTest.swift */,
+				8CBB0FC821ABC8448564C102 /* TestSupport.swift */,
+				012DAE6F2AB3BB24E4822B94 /* TofAlgorithmTest.swift */,
+				AE7BD544EC1587C22EE8FBFF /* UXSettingsTest.swift */,
+			);
+			path = HydroCapTests;
+			sourceTree = "<group>";
+		};
+		E654391E987D8E8E7C6651BF /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				25706A401C3FC21D795C3BCD /* DebugActions.swift */,
+				81000BAEEC89D562E52FCF63 /* DebugLog.swift */,
+				41A43041355C1F825A67411D /* DebugRoute.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D53C0A167D804DA8B2660396 /* HydroCapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE1D0B758E46B4EBC1D3662 /* Build configuration list for PBXNativeTarget "HydroCapTests" */;
+			buildPhases = (
+				97DA77940D29EC465B55BA58 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA327644D5EE20FEE988AE8F /* PBXTargetDependency */,
+			);
+			name = HydroCapTests;
+			packageProductDependencies = (
+			);
+			productName = HydroCapTests;
+			productReference = 23A3F755FE5CA90ED1FB9509 /* HydroCapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFC8B0A1BAA59D6D87127509 /* HydroCap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF9D22E93277EAC6376BD99A /* Build configuration list for PBXNativeTarget "HydroCap" */;
+			buildPhases = (
+				4D718AF39F6E4FFE8EC86EE2 /* Sources */,
+				BDD08E90766D99FD7BACBBB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HydroCap;
+			packageProductDependencies = (
+			);
+			productName = HydroCap;
+			productReference = AB5CAB01A15D005430C9B38E /* HydroCap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2238E0FC1DFE090DF3567F3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EFC8B0A1BAA59D6D87127509 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C3DE79204FE7A2FA5F9E6D03 /* Build configuration list for PBXProject "HydroCap" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 69E8266AF74EEDABC783940E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AC92A1DF98C9893DA3EAC6A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFC8B0A1BAA59D6D87127509 /* HydroCap */,
+				D53C0A167D804DA8B2660396 /* HydroCapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDD08E90766D99FD7BACBBB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08EAA7D1542FCFFA253EB66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D718AF39F6E4FFE8EC86EE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61546300242F2454587389B9 /* AppContainer.swift in Sources */,
+				497C36ED7644CCEC0155E496 /* AppModel.swift in Sources */,
+				2F226AC738F4AA9015C6DA29 /* AsyncWaiter.swift in Sources */,
+				6256B5C7DA18BFB1B4B2ABE9 /* BackgroundRunPolicy.swift in Sources */,
+				F02B16B51DFAEBF0C57D2A09 /* BackgroundSync.swift in Sources */,
+				040EBA62B528458FFC3353A1 /* BackgroundTaskGuard.swift in Sources */,
+				57C7F238E96C77684137EDCB /* BatteryAlertPolicy.swift in Sources */,
+				29002127F37F6064C6649ADC /* BatteryNotifier.swift in Sources */,
+				96E2990D1C73316059F663DC /* BleScanner.swift in Sources */,
+				0F339F623132CFC8962DED56 /* BottleProfile.swift in Sources */,
+				D06D81B599AD6E1F6D788977 /* CapCentral.swift in Sources */,
+				58B90B1210353EC068A942FA /* CapClient.swift in Sources */,
+				90732497E940ACB48F6E181A /* CapCodec.swift in Sources */,
+				AC7650D787CE7F369B36BFBD /* CapCommand.swift in Sources */,
+				A770B4F1D2FC94E9CBFD4C4A /* CapConnection.swift in Sources */,
+				BE6CEA8D24EDB55E42051DAB /* CapUuids.swift in Sources */,
+				0FB7EB53FFC789FFB0FD5507 /* ConnectionHandoff.swift in Sources */,
+				A0C8F43BA1FBC35481A13AE7 /* ConnectionState.swift in Sources */,
+				4359BBCC00BB1673BBD4B4F4 /* DebugActions.swift in Sources */,
+				0A123A22A07CE12B9F7579B3 /* DebugLog.swift in Sources */,
+				CA98DF5183A89467F4301C22 /* DebugRoute.swift in Sources */,
+				9C37D09CC73C6C5ACD44DDAA /* DebugView.swift in Sources */,
+				9D792E95D498D7840DD82E66 /* DeviceName.swift in Sources */,
+				9B8E21A64CD5D6E72AF776D8 /* DiscoveredCap.swift in Sources */,
+				0ED15FAF53A922A92F6A72EF /* DrinkEventBuilder.swift in Sources */,
+				9B7515B12A8799824FFFFD28 /* DrinkReminderPlanner.swift in Sources */,
+				3A787F4059D6F60F1606E62A /* DrinkReminderQueue.swift in Sources */,
+				AEDA18E3FF6CBABBD5C585B1 /* DrinkReminderScheduler.swift in Sources */,
+				7DF194A919FEECF082803F71 /* Gauges.swift in Sources */,
+				FA50ACC91C9EFB5E0F29D154 /* HealthKitGateway.swift in Sources */,
+				4CF27306F91FC56AC3F9E805 /* Hex.swift in Sources */,
+				A9122D74B2CD14B806FDEFD5 /* HistoryAggregation.swift in Sources */,
+				2E22D321392D9B5F87983F4A /* HistoryView.swift in Sources */,
+				3C291B03304A1D0D6F7E5A00 /* HomeView.swift in Sources */,
+				F221CD603481F4FBBDBB42CF /* HydrationRecordSync.swift in Sources */,
+				C368234EA86314C1BFC8D770 /* HydrationTarget.swift in Sources */,
+				D037A5212D4830E0E08DB8BB /* HydroCapApp.swift in Sources */,
+				5A45BD5EE282B5FDFD0C723E /* InMemoryStore.swift in Sources */,
+				DF512511B259D16D7B79CC27 /* Messages.swift in Sources */,
+				2AED4A24EFC109BD41D1CD2E /* NotificationReassembler.swift in Sources */,
+				37696F5D1AF34114A613115D /* NusChannel.swift in Sources */,
+				C92C546CBE52800270AF7389 /* OnboardingView.swift in Sources */,
+				4C35E1E2E4F406A9BDA3AB7D /* ProtoWire.swift in Sources */,
+				2950A2D2B2268F94388177D6 /* Records.swift in Sources */,
+				E46470DC5D38228179315605 /* ReminderConfig.swift in Sources */,
+				D9B094503577950408BC7318 /* ReminderMapping.swift in Sources */,
+				D3EDB6038CDD1F31ECE62F71 /* ReminderView.swift in Sources */,
+				4EF66452BC992CE957600579 /* RequestIdCounter.swift in Sources */,
+				F3309633804A8D5DBABA8E54 /* RootView.swift in Sources */,
+				EB79DA6B74A0630C80071E41 /* Settings.swift in Sources */,
+				75D130D41DE392B38A82704B /* SettingsView.swift in Sources */,
+				F8140BA32986A56C0507D3FC /* Stores.swift in Sources */,
+				B205CD7F7CE5B808A7920414 /* SwiftDataModels.swift in Sources */,
+				2D772DE04C4FF52610FE1388 /* SyncEngine.swift in Sources */,
+				7861E70B3F9ECEF141A1980D /* SyncErrors.swift in Sources */,
+				F432B187E435F799DBCAEFF2 /* Theme.swift in Sources */,
+				BCBE2CE5A301B122EC9D37A0 /* TofAlgorithm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97DA77940D29EC465B55BA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB2B57BDB2EE5B993BD99C4 /* BackgroundRunPolicyTest.swift in Sources */,
+				4A108F33D146319A55FCE183 /* BottleProfileCalibrationTest.swift in Sources */,
+				21253E26C09F9DD9FF238378 /* CapUuidsTests.swift in Sources */,
+				BD9336EF62410C471666B01B /* CaptureVectorTest.swift in Sources */,
+				7F677386A2A03D2676A42832 /* CommandAllowlistTest.swift in Sources */,
+				5C5E00912AAC18706B981935 /* ConnectionHandoffTests.swift in Sources */,
+				D7B9E7ACECB6C74823486746 /* DebugRouteTest.swift in Sources */,
+				9A20AF75AEA597C1BB9D5C1A /* DeviceNameTest.swift in Sources */,
+				177E56DDAC1D720593AD46AC /* DrinkReminderCalendarTest.swift in Sources */,
+				100FF4525C46381E9C463866 /* DrinkReminderPlannerTest.swift in Sources */,
+				1C08FAC2B5B1BC4233FBB1DE /* DrinkReminderQueueTest.swift in Sources */,
+				6A89B5FB2C5AC9752252A192 /* HistoryAggregationTest.swift in Sources */,
+				4F9165CA1427B27BA1D8CBCD /* HydrationRecordSyncTest.swift in Sources */,
+				A4E7D8258CB6D0B7D569DB6E /* HydrationTargetTest.swift in Sources */,
+				1BC88DAFABC940FEDD6E6D3E /* NotificationReassemblerTest.swift in Sources */,
+				F10AB5D6B5DDF137F4665AF7 /* NusChannelTest.swift in Sources */,
+				AA40B00EE6CBAF4892CCF093 /* ProtocolGoldenTest.swift in Sources */,
+				396BA7C68B86F3808A6F924B /* ReminderRulesTest.swift in Sources */,
+				2DA69344C85F98245C0792EC /* TestSupport.swift in Sources */,
+				F9DCC3D6DA045CE1027D4D52 /* TofAlgorithmTest.swift in Sources */,
+				61206720987B70464B28E6A7 /* UXSettingsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA327644D5EE20FEE988AE8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC8B0A1BAA59D6D87127509 /* HydroCap */;
+			targetProxy = DFDE686B3B64FE04CB6440FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		258E39EE381E80B95895CA62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_ACTOR_ISOLATED_TYPES_USABILITY = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_ISOLATED_CONFORMANCES = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		72A3FACC7B68FB3855045E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				CODE_SIGN_ENTITLEMENTS = Support/HydroCap.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HydroCap;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LM_SKIP_METADATA_EXTRACTION = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hydrocap.app;
+				PRODUCT_NAME = HydroCap;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A9250D8C1740CB44C2F77D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
+				CODE_SIGN_ENTITLEMENTS = Support/HydroCap.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HydroCap;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LM_SKIP_METADATA_EXTRACTION = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hydrocap.app;
+				PRODUCT_NAME = HydroCap;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D0FDEF57B84589A9AE6F492B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LM_SKIP_METADATA_EXTRACTION = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hydrocap.app.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HydroCap.app/HydroCap";
+			};
+			name = Release;
+		};
+		D2CBD0145B37F8CCAEEFD462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LM_SKIP_METADATA_EXTRACTION = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hydrocap.app.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HydroCap.app/HydroCap";
+			};
+			name = Debug;
+		};
+		E3F47D78B4DA66B15547B36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_ACTOR_ISOLATED_TYPES_USABILITY = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_ISOLATED_CONFORMANCES = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3DE79204FE7A2FA5F9E6D03 /* Build configuration list for PBXProject "HydroCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F47D78B4DA66B15547B36C /* Debug */,
+				258E39EE381E80B95895CA62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF9D22E93277EAC6376BD99A /* Build configuration list for PBXNativeTarget "HydroCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9250D8C1740CB44C2F77D50 /* Debug */,
+				72A3FACC7B68FB3855045E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EBE1D0B758E46B4EBC1D3662 /* Build configuration list for PBXNativeTarget "HydroCapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CBD0145B37F8CCAEEFD462 /* Debug */,
+				D0FDEF57B84589A9AE6F492B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2238E0FC1DFE090DF3567F3A /* Project object */;
+}

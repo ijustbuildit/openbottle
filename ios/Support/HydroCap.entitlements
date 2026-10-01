@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.healthkit</key>
+	<true/>
+	<!-- Empty array is correct: HydroCap only touches non-clinical types
+	     (dietary water). Background delivery is not needed. -->
+	<key>com.apple.developer.healthkit.access</key>
+	<array/>
+</dict>
+</plist>

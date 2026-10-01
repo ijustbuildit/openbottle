@@ -1,0 +1,47 @@
+# Gradle / Android
+android/.gradle/
+android/build/
+android/**/build/
+android/local.properties
+android/.kotlin/
+android/**/*.iml
+android/.idea/
+android/captures/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# iOS / Xcode
+ios/**/xcuserdata/
+ios/**/DerivedData/
+ios/**/*.xcworkspace/xcshareddata/
+ios/build/
+ios/Signing.local.xcconfig
+
+# Vendor artifacts are not distributable project source
+vendor/
+decompiled/
+*.xapk
+jadx_*/
+
+# Personal captures, machine settings, credentials and reports
+/tools/captures/
+*.log
+.env
+.env.*
+*.p12
+*.mobileprovision
+*.pem
+*.key
+/private/
+/publication-export/
+/local-evidence/
+
+# OS / editor / local agent scratch
+.DS_Store
+.codex/
+.vscode/
+.venv/
+__pycache__/
+*.pyc

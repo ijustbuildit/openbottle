@@ -1,0 +1,21 @@
+{
+  "reference_commit": null,
+  "baseline_reference_commit": "0d2011e902a3ca4d61df6822f348176002a9c2ef",
+  "reference_revision": "dynamic-y-axis-v1",
+  "reference_identity": "Exact source_sha256 of the current sanitized production snapshot; no unchanged-commit claim.",
+  "synthetic": true,
+  "source_sha256": {
+    "ios/HydroCap/Data/Records.swift": "52885bb56cb66f278383140c8c3216d3e5825760fa843c4dabc25b92a47f3996",
+    "ios/HydroCap/Domain/HydrationTarget.swift": "c2c2bf14aeb93a69aba047ce7ace805294594bdd68cb6796702fbc63b741f9e3",
+    "ios/HydroCap/Domain/HistoryAggregation.swift": "9e0df622c0abd365dde3721b841f66635aabba9b29dc4c59a7de9b07b4ba5025",
+    "ios/HydroCap/Domain/ReminderConfig.swift": "90aa2229e9cb571942b9a7c48eaa3b7eb52a950f1da9130540cb4e717d1ed612",
+    "ios/HydroCap/Notify/DrinkReminderPlanner.swift": "ecf19b31de68826f09e855521c1fe58446686e761f1c7ca5638ece9471ed0943",
+    "tools/ios-parity-reference.swift": "690cb458947e8715f4f6ef64e400943f5e0c8c65626e152c9b369d5a0fef5312"
+  },
+  "case_counts": {
+    "targets": 70,
+    "history": 50,
+    "reminders": 68
+  },
+  "generation": "Inputs generated with Python; expected values MUST be executed by native Swift CLI against these source hashes."
+}

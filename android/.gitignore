@@ -1,0 +1,8 @@
+# Room schema exports are committed (app/schemas) for migration diffs.
+.gradle/
+build/
+.kotlin/
+local.properties
+*.iml
+.idea/
+captures/

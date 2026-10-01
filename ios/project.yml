@@ -1,0 +1,90 @@
+# HydroCap iOS — XcodeGen project definition.
+#
+# Generate with:  cd ios && xcodegen generate
+#
+# No SwiftPM dependencies at all: everything the app uses ships with the OS.
+#
+# The Swift settings below are byte-identical to the ones
+# ios/scripts/typecheck.sh passes to swiftc for the Mac Catalyst typecheck.
+# Matching language settings do not make that check an iPhoneOS build:
+# SwiftData macro expansion, assets and signing still require Xcode.
+name: HydroCap
+
+options:
+  minimumXcodeGenVersion: "2.42.0"
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "26.0"
+  defaultConfig: Debug
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    # Same as `-default-isolation MainActor` in ios/scripts/typecheck.sh.
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_STRICT_CONCURRENCY: complete
+    SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+    SWIFT_UPCOMING_FEATURE_INFER_ISOLATED_CONFORMANCES: YES
+    SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT: YES
+    SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES: YES
+    SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION: YES
+    SWIFT_UPCOMING_FEATURE_GLOBAL_ACTOR_ISOLATED_TYPES_USABILITY: YES
+    CLANG_ENABLE_MODULES: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    SWIFT_EMIT_LOC_STRINGS: NO
+
+targets:
+  HydroCap:
+    type: application
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: HydroCap
+    settings:
+      base:
+        PRODUCT_NAME: HydroCap
+        PRODUCT_BUNDLE_IDENTIFIER: dev.hydrocap.app
+        # Choose your own signing team locally in Xcode; no account is committed.
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Support/HydroCap.entitlements
+        INFOPLIST_FILE: Support/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ENABLE_TESTABILITY: YES
+        # No AppIntents/Shortcuts feature: omit its unused metadata task producer.
+        LM_SKIP_METADATA_EXTRACTION: YES
+        ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS: NO
+        # Original bottle artwork; portable rendering tools are under tools/.
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_CFBundleDisplayName: HydroCap
+
+  HydroCapTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: HydroCapTests
+    dependencies:
+      - target: HydroCap
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.hydrocap.app.tests
+        GENERATE_INFOPLIST_FILE: YES
+        # The unit-test bundle also defines no AppIntents metadata.
+        LM_SKIP_METADATA_EXTRACTION: YES
+        SWIFT_STRICT_CONCURRENCY: complete
+
+schemes:
+  HydroCap:
+    build:
+      targets:
+        HydroCap: all
+        HydroCapTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - HydroCapTests

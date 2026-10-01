@@ -1,0 +1,4 @@
+# These bundles preserve upstream license/attribution bytes verbatim, including
+# mixed CRLF and original trailing spaces. Do not normalize their line endings.
+THIRD_PARTY_LICENSES_AND_NOTICES.txt -text whitespace=-blank-at-eol,cr-at-eol
+android/app/src/main/assets/licenses/THIRD_PARTY_LICENSES_AND_NOTICES.txt -text whitespace=-blank-at-eol,cr-at-eol
