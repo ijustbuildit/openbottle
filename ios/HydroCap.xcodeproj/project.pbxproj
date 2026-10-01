@@ -68,6 +68,7 @@
 		BE6CEA8D24EDB55E42051DAB /* CapUuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF357830EDE82D153C5C25A /* CapUuids.swift */; };
 		C08EAA7D1542FCFFA253EB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC47467BCF539A1B6D349C0 /* Assets.xcassets */; };
 		C368234EA86314C1BFC8D770 /* HydrationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC796114C421AD8D148EDE6 /* HydrationTarget.swift */; };
+		C68119571D603E60C0EC910A /* BrandingMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF473D4E0E12D059BA0CF4 /* BrandingMetadataTests.swift */; };
 		C92C546CBE52800270AF7389 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AB1B6EF1CE541E66EA6FCC /* OnboardingView.swift */; };
 		CA98DF5183A89467F4301C22 /* DebugRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A43041355C1F825A67411D /* DebugRoute.swift */; };
 		D037A5212D4830E0E08DB8BB /* HydroCapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08859612ED5C6489A6B44D0D /* HydroCapApp.swift */; };
@@ -102,6 +103,7 @@
 		012DAE6F2AB3BB24E4822B94 /* TofAlgorithmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TofAlgorithmTest.swift; sourceTree = "<group>"; };
 		04DBE80447D97AF4A26B4094 /* NotificationReassemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReassemblerTest.swift; sourceTree = "<group>"; };
 		050DD00489A182EA65E2875E /* HistoryAggregation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAggregation.swift; sourceTree = "<group>"; };
+		06BF473D4E0E12D059BA0CF4 /* BrandingMetadataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandingMetadataTests.swift; sourceTree = "<group>"; };
 		08859612ED5C6489A6B44D0D /* HydroCapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroCapApp.swift; sourceTree = "<group>"; };
 		0A53B42D15E87777D085B764 /* DeviceName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceName.swift; sourceTree = "<group>"; };
 		11D3ED935CF02CFC66113D54 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				AC26FDB03D65BED763E3CE5A /* BackgroundRunPolicyTest.swift */,
 				84F0C6BD77E5BA95B8EE91A2 /* BottleProfileCalibrationTest.swift */,
+				06BF473D4E0E12D059BA0CF4 /* BrandingMetadataTests.swift */,
 				99996752D7C4563B586034D3 /* CaptureVectorTest.swift */,
 				CAFB63E80B27414A4052FE7F /* CapUuidsTests.swift */,
 				FCE0E00D8CC16EA2254DB597 /* CommandAllowlistTest.swift */,
@@ -529,6 +532,7 @@
 			files = (
 				BAB2B57BDB2EE5B993BD99C4 /* BackgroundRunPolicyTest.swift in Sources */,
 				4A108F33D146319A55FCE183 /* BottleProfileCalibrationTest.swift in Sources */,
+				C68119571D603E60C0EC910A /* BrandingMetadataTests.swift in Sources */,
 				21253E26C09F9DD9FF238378 /* CapUuidsTests.swift in Sources */,
 				BD9336EF62410C471666B01B /* CaptureVectorTest.swift in Sources */,
 				7F677386A2A03D2676A42832 /* CommandAllowlistTest.swift in Sources */,
@@ -640,7 +644,7 @@
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Support/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HydroCap;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenBottle;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +671,7 @@
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Support/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HydroCap;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenBottle;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

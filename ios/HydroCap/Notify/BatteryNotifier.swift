@@ -81,7 +81,7 @@ final class BatteryNotifier {
         if threshold <= SettingsDefaults.batteryCritical {
             content.body = "Your LARQ cap is critically low. Charge it before it locks out."
         } else {
-            content.body = "Your LARQ cap is low. Charge it soon — HydroCap keeps syncing until \(threshold) %."
+            content.body = "Your LARQ cap is low. Charge it soon — OpenBottle keeps syncing until \(threshold) %."
         }
         content.categoryIdentifier = BatteryNotifier.categoryIdentifier
         content.sound = .default

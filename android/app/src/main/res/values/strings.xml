@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HydroCap</string>
+    <string name="app_name">OpenBottle</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <plurals name="settings_bottle_rebuilt">
@@ -13,7 +13,7 @@
     <string name="notification_battery_title">Cap battery at %1$d %%</string>
     <string name="notification_battery_text">Below %1$d %% — charge the cap soon.</string>
     <string name="notification_channel_sync">Cap sync</string>
-    <string name="notification_sync_title">HydroCap</string>
+    <string name="notification_sync_title">OpenBottle</string>
     <string name="notification_sync_text_sync">Syncing with the cap…</string>
     <string name="notification_sync_text_tof">Reading live fill level…</string>
     <string name="notification_sync_text_read_all">Reading cap settings…</string>

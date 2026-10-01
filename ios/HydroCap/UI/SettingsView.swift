@@ -261,7 +261,7 @@ struct SettingsView: View {
         } header: {
             Text("Apple Health")
         } footer: {
-            Text("\(model.healthTrackedCount) record\(model.healthTrackedCount == 1 ? "" : "s") written by HydroCap. Weight and biological sex are read for the daily target; iOS does not report whether reading was allowed, so \"not available\" can also mean the access is off in Health → Sharing → Apps.")
+            Text("\(model.healthTrackedCount) record\(model.healthTrackedCount == 1 ? "" : "s") written by OpenBottle. Weight and biological sex are read for the daily target; iOS does not report whether reading was allowed, so \"not available\" can also mean the access is off in Health → Sharing → Apps.")
         }
     }
 
@@ -281,7 +281,7 @@ struct SettingsView: View {
         } header: {
             Text("Background sync")
         } footer: {
-            Text("iOS wakes HydroCap when the cap is in range and adds a refresh roughly every 15 minutes. iOS decides when this actually runs.")
+            Text("iOS wakes OpenBottle when the cap is in range and adds a refresh roughly every 15 minutes. iOS decides when this actually runs.")
         }
     }
 
@@ -317,12 +317,12 @@ struct SettingsView: View {
     private var aboutSection: some View {
         Section {
             LabeledContent("Version", value: AppContainer.version)
-            Text("No HydroCap account or server. Apple Health follows your system settings.")
+            Text("No OpenBottle account or server. Apple Health follows your system settings.")
                 .font(.footnote)
         } header: {
             Text("About")
         } footer: {
-            Text("HydroCap is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. \"BRITA\" and \"LARQ\" are trademarks of their respective owners and are used here only to identify the hardware the app works with.")
+            Text("OpenBottle is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. \"BRITA\" and \"LARQ\" are trademarks of their respective owners and are used here only to identify the hardware the app works with.")
         }
     }
 

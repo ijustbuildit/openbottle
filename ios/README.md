@@ -1,4 +1,4 @@
-# HydroCap iOS
+# OpenBottle iOS
 
 SwiftUI port of the Android app: same protocol codec, same ToF algorithm,
 same calibrated bottle profile, same command allowlist. No dependencies, no
@@ -137,7 +137,7 @@ Both scripts run from the repo root.
 
 The weight reference of 35 ml/kg for adults aged 19–50 includes water from
 both food and drinks; it is not a beverage-only requirement.[1]
-HydroCap's **explicit product assumption** is a 30% food allowance, so its
+OpenBottle's **explicit product assumption** is a 30% food allowance, so its
 starting drink goal is `weight × 35 × 0.70`, rounded to 50 ml within
 1.5–4 L. Those bounds are app guardrails, not physiological safe limits.
 The sex-only starting goals use the same allowance (male 1.75 L, female
@@ -145,7 +145,7 @@ The sex-only starting goals use the same allowance (male 1.75 L, female
 is 2 L. There is no additional sex multiplier when weight is known.
 This is a rough adult tracking goal, not an individualized medical requirement.
 Diet, activity, climate and medical circumstances are not measured. Other
-drinks count too; HydroCap's progress only shows this bottle's logged intake.
+drinks count too; OpenBottle's progress only shows this bottle's logged intake.
 Prescribed fluid limits take precedence.
 
 Weight (latest `bodyMass` sample) and biological sex are read from Apple
@@ -230,7 +230,7 @@ request shares `dietaryWater` and reads `bodyMass` + `biologicalSex` (see
 ## Privacy and licensing
 
 Health and system backups/exports follow the operating system's own settings;
-no HydroCap account/backend is involved. Debug logs are sensitive and should
+no OpenBottle account/backend is involved. Debug logs are sensitive and should
 be redacted before sharing. See [Privacy](../docs/privacy.md).
 
 Original sources and independently authored bottle artwork use

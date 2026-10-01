@@ -1,10 +1,10 @@
-# HydroCap — BRITA LARQ iQ companion app
+# OpenBottle — BRITA LARQ iQ companion app
 
-An independent iOS and Android app for BRITA LARQ iQ smart bottles and compatible LARQ-family caps. Connect over Bluetooth, see battery and bottle-fill estimates, track drinks, configure the LED reminder ring, and optionally sync to Apple Health or Android Health Connect—without a HydroCap, BRITA, or LARQ account.
+An independent iOS and Android app for BRITA LARQ iQ smart bottles and compatible LARQ-family caps. Connect over Bluetooth, see battery and bottle-fill estimates, track drinks, configure the LED reminder ring, and optionally sync to Apple Health or Android Health Connect—without an OpenBottle, BRITA, or LARQ account.
 
-HydroCap is an unofficial alternative to the BRITA/LARQ bottle app, not a manufacturer-supported app. It is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. See the [compatibility and limitations](#compatibility-and-limitations) before choosing a bottle profile.
+OpenBottle is an unofficial alternative to the BRITA/LARQ bottle app, not a manufacturer-supported app. It is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. See the [compatibility and limitations](#compatibility-and-limitations) before choosing a bottle profile.
 
-HydroCap does not operate an account service, backend, analytics service, or vendor-cloud integration. Health services, system backups, and user-initiated exports follow the device's own settings; see [Privacy](docs/privacy.md).
+OpenBottle does not operate an account service, backend, analytics service, or vendor-cloud integration. Health services, system backups, and user-initiated exports follow the device's own settings; see [Privacy](docs/privacy.md).
 
 ## Features
 
@@ -29,7 +29,7 @@ The daily goal is an adjustable adult tracking estimate, not medical advice or a
 
 Background execution and notification delivery are controlled by iOS/Android. Alerts depend on a successful sync; they are not continuous real-time monitoring. iOS force quit, Bluetooth being off, power restrictions, and device-specific Android restrictions can delay updates.
 
-HydroCap deliberately provides no firmware-update, factory-reset, UV-control, cap-calibration, or unrestricted-command interface.
+OpenBottle deliberately provides no firmware-update, factory-reset, UV-control, cap-calibration, or unrestricted-command interface.
 
 ## Build
 
@@ -37,6 +37,8 @@ HydroCap deliberately provides no firmware-update, factory-reset, UV-control, ca
 |---|---|---|
 | Android | JDK 21; Android SDK with API 36; device Android 10+ | [Android README](android/README.md) |
 | iOS | macOS; Xcode with the iOS 26 SDK; iPhone running iOS 26+ | [iOS README](ios/README.md) |
+
+OpenBottle was originally developed as HydroCap. Existing technical identifiers—including `dev.hydrocap.app`, Health sync IDs, storage keys, the `hydrocap://` debug scheme, and the `HydroCap` Xcode project/scheme—remain unchanged for update and data compatibility. The visible app name is OpenBottle.
 
 The committed Xcode project can be opened directly. Choose your own local signing team; no developer account or signing key is included. Android uses the checked-in Gradle wrapper. Debug binaries are development builds, not store-signed releases.
 
@@ -66,8 +68,8 @@ See [Contributing](CONTRIBUTING.md), [third-party notices](THIRD_PARTY_NOTICES.m
 
 ## License
 
-HydroCap's original code and original artwork are available under [PolyForm Noncommercial 1.0.0](LICENSE). Permitted noncommercial use, modification, and redistribution are governed by that license. Commercial use outside those permissions requires a separate written license from the relevant rights holders; contact the project maintainers through the repository to discuss it.
+OpenBottle's original code and original artwork are available under [PolyForm Noncommercial 1.0.0](LICENSE). Permitted noncommercial use, modification, and redistribution are governed by that license. Commercial use outside those permissions requires a separate written license from the relevant rights holders; contact the project maintainers through the repository to discuss it.
 
-This is **source-available software**, not an OSI-approved Open Source license. Third-party components retain their own licenses, which are not replaced or restricted by HydroCap's license.
+This is **source-available software**, not an OSI-approved Open Source license. Third-party components retain their own licenses, which are not replaced or restricted by OpenBottle's license.
 
-HydroCap is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. Those names are used only to identify hardware. Hardware trademarks remain the property of their respective owners. Source publication does not imply App Store or Google Play approval.
+OpenBottle is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. Those names are used only to identify hardware. Hardware trademarks remain the property of their respective owners. Source publication does not imply App Store or Google Play approval.

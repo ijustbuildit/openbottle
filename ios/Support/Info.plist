@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>HydroCap</string>
+	<string>OpenBottle</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>OpenBottle</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -43,16 +43,16 @@
 
 	<!-- Bluetooth: the cap is only reachable over BLE. -->
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>HydroCap connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log. Nothing leaves your iPhone.</string>
+	<string>OpenBottle connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log. No OpenBottle account or server is required.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>HydroCap connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log.</string>
+	<string>OpenBottle connects to your LARQ-family bottle cap over Bluetooth to read battery level and the measurement log.</string>
 
 	<!-- Apple Health: drink events are written as dietary water samples; weight
 	     and biological sex are read to estimate the daily water target. -->
 	<key>NSHealthShareUsageDescription</key>
-	<string>HydroCap reads your weight and biological sex from Apple Health to suggest an adjustable drink goal. Missing values can be entered manually or skipped. HydroCap has no account or server.</string>
+	<string>OpenBottle reads your weight and biological sex from Apple Health to suggest an adjustable drink goal. Missing values can be entered manually or skipped. OpenBottle has no account or server.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>HydroCap writes the drink events it derives from your bottle into Apple Health as dietary water.</string>
+	<string>OpenBottle writes the drink events it derives from your bottle into Apple Health as dietary water.</string>
 
 	<!-- Background work: bluetooth-central keeps the cap connection alive and
 	     lets iOS wake us when the cap advertises; fetch/processing are for the

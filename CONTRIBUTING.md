@@ -1,6 +1,6 @@
-# Contributing to HydroCap
+# Contributing to OpenBottle
 
-HydroCap is source-available under [PolyForm Noncommercial 1.0.0](LICENSE), not an OSI-approved Open Source license. Third-party dependencies retain their own licenses.
+OpenBottle is source-available under [PolyForm Noncommercial 1.0.0](LICENSE), not an OSI-approved Open Source license. Third-party dependencies retain their own licenses.
 
 ## Before submitting
 

@@ -1,6 +1,6 @@
-# HydroCap for Android
+# OpenBottle for Android
 
-Native Kotlin / Jetpack Compose companion app. Package: `dev.hydrocap.app`. Room stores measurements and inferred drinks; DataStore stores preferences; WorkManager performs best-effort background sync; Health Connect is optional. HydroCap declares no `INTERNET` permission and has no account/backend/vendor-cloud integration.
+Native Kotlin / Jetpack Compose companion app. Package: `dev.hydrocap.app`. Room stores measurements and inferred drinks; DataStore stores preferences; WorkManager performs best-effort background sync; Health Connect is optional. OpenBottle declares no `INTERNET` permission and has no account/backend/vendor-cloud integration.
 
 ## Build
 
@@ -52,13 +52,13 @@ Longer buckets show average ml per day **with positive recorded intake**. Zero/u
 ## Health Connect
 
 - Writes `HydrationRecord` entries with stable app-owned `clientRecordId` values and increasing versions. Upserts are deduplicated; unchanged events cause no repeated write.
-- Deletes, when algorithm reconciliation requires them, are restricted to IDs HydroCap itself previously wrote. Other apps' records are never touched.
+- Deletes, when algorithm reconciliation requires them, are restricted to IDs OpenBottle itself previously wrote. Other apps' records are never touched.
 - Room schema v2 adds the write-tracking table through an automatic migration; there is no destructive migration fallback.
 - Optional weight reads use real `WeightRecord` data within the provider's accessible time range. Permission absence and no available sample are distinct states. No synthetic Health value is substituted.
 - Health Connect does not expose the equivalent of HealthKit biological sex; this remains an optional manual fallback. See [platform notes](../docs/research/android-health-parity.md).
 - The editable adult goal and its caveats are described in the [iOS README](../ios/README.md#daily-drink-goal-an-editable-estimate).
 
-Health Connect can export/transfer data under its own settings. HydroCap's lack of a backend does not mean Health data can never leave the phone; see [Privacy](../docs/privacy.md).
+Health Connect can export/transfer data under its own settings. OpenBottle's lack of a backend does not mean Health data can never leave the phone; see [Privacy](../docs/privacy.md).
 
 ## BLE, ring controls, and notifications
 
@@ -86,4 +86,4 @@ Do not target other people's caps or stop/uninstall competing apps without their
 
 JVM tests cover protocol vectors, allowlist, volume state machine, pairing/job ownership, Health record reconciliation, goal/history math, and reminder planning/queue/delivery policy. Cross-platform fixtures run against native Swift-produced results, not a Kotlin-derived oracle. Native UI tests and real-cap/device checks are separate gates; a build or unit-test pass alone proves neither.
 
-HydroCap's original sources use [PolyForm Noncommercial 1.0.0](../LICENSE). Redistributed dependencies and fonts retain their own licenses; see [Third-party notices](../THIRD_PARTY_NOTICES.md).
+OpenBottle's original sources use [PolyForm Noncommercial 1.0.0](../LICENSE). Redistributed dependencies and fonts retain their own licenses; see [Third-party notices](../THIRD_PARTY_NOTICES.md).

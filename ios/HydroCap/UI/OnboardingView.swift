@@ -60,7 +60,7 @@ struct OnboardingWelcomeStep: View {
                         .padding(.bottom, 4)
                     Text("Track your bottle")
                         .font(.largeTitle.weight(.bold))
-                    Text("HydroCap reads your LARQ iQ cap and can write drinks to Apple Health. Available body values help estimate an editable daily drink goal.")
+                    Text("OpenBottle reads your LARQ iQ cap and can write drinks to Apple Health. Available body values help estimate an editable daily drink goal.")
                         .font(.body)
                         .foregroundStyle(.secondary)
                 }
@@ -68,7 +68,7 @@ struct OnboardingWelcomeStep: View {
                 .padding(.top, 24)
 
                 VStack(alignment: .leading, spacing: 10) {
-                    Label("No HydroCap account or server. Apple Health follows your system settings.", systemImage: "lock.fill")
+                    Label("No OpenBottle account or server. Apple Health follows your system settings.", systemImage: "lock.fill")
                     Label("The cap needs no pairing code.", systemImage: "dot.radiowaves.left.and.right")
                 }
                 .font(.subheadline)
@@ -187,7 +187,7 @@ struct OnboardingOptionalStep: View {
                         title: "Apple Health",
                         text: model.healthCanStillAsk
                             ? "Write drinks as water and use available body values for an editable target."
-                            : "Writing water is not allowed. You can change HydroCap's access in Apple Health; body values are optional.",
+                            : "Writing water is not allowed. You can change OpenBottle's access in Apple Health; body values are optional.",
                     ) {
                         if model.healthCanStillAsk {
                             Button("Connect") {
@@ -230,7 +230,7 @@ struct OnboardingOptionalStep: View {
                     OptionalRow(
                         systemImage: "dot.radiowaves.left.and.right",
                         title: "Bluetooth",
-                        text: "Bluetooth access is off for HydroCap, so the cap cannot be found. Turn it on in iOS Settings.",
+                        text: "Bluetooth access is off for OpenBottle, so the cap cannot be found. Turn it on in iOS Settings.",
                     ) {
                         openSettingsButton
                     }
@@ -365,7 +365,7 @@ struct HealthAccessHelpButton: View {
             .alert("Change Health access", isPresented: $showingHelp) {
                 Button("OK", role: .cancel) {}
             } message: {
-                Text("Open Apple Health, tap your profile, then Apps and Services → HydroCap. Allow writing Water to sync drinks. Reading Weight and Biological Sex is optional. Return to HydroCap to refresh the status.")
+                Text("Open Apple Health, tap your profile, then Apps and Services → OpenBottle. Allow writing Water to sync drinks. Reading Weight and Biological Sex is optional. Return to OpenBottle to refresh the status.")
             }
     }
 }

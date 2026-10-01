@@ -19,7 +19,7 @@ import dev.hydrocap.app.proto.ResponseGetCapUiState
 
 /** Thrown when a message outside [CapCommand] is handed to the codec. */
 class DisallowedCommandException(typeName: String) :
-    IllegalArgumentException("Request '$typeName' is not in the HydroCap command allowlist")
+    IllegalArgumentException("Request '$typeName' is not in the OpenBottle command allowlist")
 
 /** A decoded response envelope. [body] is null for setters and for NOT_SUPPORTED/FAIL. */
 data class DecodedResponse(

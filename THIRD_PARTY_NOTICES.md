@@ -1,6 +1,6 @@
-# HydroCap third-party notices
+# OpenBottle third-party notices
 
-This document covers third-party components, not HydroCap itself. Full verbatim licenses and attribution are in `THIRD_PARTY_LICENSES_AND_NOTICES.txt`. An identical copy is packaged under Android assets/licenses; project-license terms do not replace these component licenses.
+This document covers third-party components, not OpenBottle itself. Full verbatim licenses and attribution are in `THIRD_PARTY_LICENSES_AND_NOTICES.txt`. An identical copy is packaged under Android assets/licenses; project-license terms do not replace these component licenses.
 
 Resolved release runtime graph: 151 modules; 105 artifact-bearing coordinates. Debug graph: 156 modules; 108 artifact-bearing coordinates. BOMs/metadata forwarding modules are listed but are not additional shipped binaries.
 
@@ -177,4 +177,4 @@ Nunito: Copyright 2014 The Nunito Project Authors (https://github.com/googlefont
 - publication verification: No per-release AndroidX root NOTICE was published in the inspected artifact/source archives; AndroidX main root tree has no NOTICE file. Versioned source copyright/license blocks are preserved instead.
 - publication verification: Kotlin repository NOTICE explicitly concerns the compiler distribution, not stdlib; stdlib source notices and Apache license are included. Protobuf compiler notices.h concerns protoc build tools, not Java runtime; Java source notices and BSD license are included.
 
-The independent project LICENSE is PolyForm Noncommercial 1.0.0. The licenses above govern their respective third-party components without a HydroCap noncommercial restriction. License evidence is not legal advice or a store-approval guarantee.
+The independent project LICENSE is PolyForm Noncommercial 1.0.0. The licenses above govern their respective third-party components without an OpenBottle noncommercial restriction. License evidence is not legal advice or a store-approval guarantee.

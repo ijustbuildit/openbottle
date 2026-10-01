@@ -275,7 +275,7 @@ final class CapConnection: NusTransport {
         guard let peripheral, let nusRx else { throw BleConnectionError("not connected") }
         guard bytes.count <= maximumWriteLength else {
             throw BleConnectionError(
-                "request of \(bytes.count) B exceeds the negotiated write length \(maximumWriteLength) B; HydroCap never chunks writes",
+                "request of \(bytes.count) B exceeds the negotiated write length \(maximumWriteLength) B; OpenBottle never chunks writes",
             )
         }
         let first = preferredWriteType

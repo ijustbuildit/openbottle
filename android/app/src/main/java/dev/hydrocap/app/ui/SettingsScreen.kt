@@ -54,7 +54,7 @@ fun SettingsScreen(state: SettingsUiState, busy: Boolean, onAppearance: (String)
             StepperRow("Alert at", "${s.batteryAlertPercent} %", { onBattery((s.batteryAlertPercent-1).coerceAtLeast(2),s.batteryCriticalPercent) }, { onBattery((s.batteryAlertPercent+1).coerceAtMost(50),s.batteryCriticalPercent) })
             StepperRow("Critical at", "${s.batteryCriticalPercent} %", { onBattery(s.batteryAlertPercent,(s.batteryCriticalPercent-1).coerceAtLeast(1)) }, { onBattery(s.batteryAlertPercent,(s.batteryCriticalPercent+1).coerceAtMost(s.batteryAlertPercent-1)) })
         } }
-        item { FormSection("Health Connect", "${state.healthTrackedCount} records written by HydroCap. Reading weight is optional and separate from writing water. Weight is checked in the last 30 days; biological sex is an optional manual fallback.") {
+        item { FormSection("Health Connect", "${state.healthTrackedCount} records written by OpenBottle. Reading weight is optional and separate from writing water. Weight is checked in the last 30 days; biological sex is an optional manual fallback.") {
             ToggleRow("Write drinks to Health Connect", s.healthSyncEnabled, state.body.availability == HealthConnectSupport.Availability.AVAILABLE) { onHealthToggle(it) }
             ValueRow("Status", when { state.body.availability != HealthConnectSupport.Availability.AVAILABLE -> "Not available"; !s.healthSyncEnabled -> "Off"; state.body.hydrationPermission -> "Allowed"; else -> "Permission missing" })
             ValueRow("Weight", state.body.weightStatus)
@@ -79,8 +79,8 @@ fun SettingsScreen(state: SettingsUiState, busy: Boolean, onAppearance: (String)
             if (busy) Text("Finish the current cap job before changing bottles.", style = MaterialTheme.typography.labelSmall)
         } }
         item { FormSection("Debug") { ValueRow("Debug log & actions", "", onDebug) } }
-        item { FormSection("About", "HydroCap is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. BRITA and LARQ are trademarks used only to identify compatible hardware.") {
-            ValueRow("Version", BuildConfig.VERSION_NAME); Text("No HydroCap account or server. Health Connect follows your system settings.", style = MaterialTheme.typography.bodySmall)
+        item { FormSection("About", "OpenBottle is not affiliated with, endorsed by, or supported by BRITA SE or LARQ, Inc. BRITA and LARQ are trademarks used only to identify compatible hardware.") {
+            ValueRow("Version", BuildConfig.VERSION_NAME); Text("No OpenBottle account or server. Health Connect follows your system settings.", style = MaterialTheme.typography.bodySmall)
         } }
     }
     if (forgetting || changing) AlertDialog(onDismissRequest = { forgetting = false; changing = false }, title = { Text(if (forgetting) "Forget this bottle?" else "Pair a different bottle?") },

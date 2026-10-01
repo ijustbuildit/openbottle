@@ -329,7 +329,7 @@ final class AppModel {
 
     /// "LARQ iQ" for a LARQ-family cap, the raw name otherwise.
     var displayName: String {
-        guard let name = settings.pairedDeviceName else { return "HydroCap" }
+        guard let name = settings.pairedDeviceName else { return "OpenBottle" }
         return name.hasPrefix(DeviceName.prefix) ? "LARQ iQ" : name
     }
 
@@ -444,7 +444,7 @@ final class AppModel {
         if enable, !(await container.batteryNotifier.isAuthorized()) {
             enable = await requestNotifications()
             if !enable {
-                drinkReminderMessage = "Reminders stay off because notifications are not allowed. Enable notifications for HydroCap in iOS Settings."
+                drinkReminderMessage = "Reminders stay off because notifications are not allowed. Enable notifications for OpenBottle in iOS Settings."
                 container.debugLog.log("ui", "drink reminders stay off: notification permission missing")
             }
         }
@@ -681,7 +681,7 @@ final class AppModel {
         if enabled {
             let granted = await connectAppleHealth()
             guard granted else {
-                healthWriteMessage = "Writing water is not allowed. Open Apple Health → profile → Apps and Services → HydroCap to change access. Body values can still be used when available."
+                healthWriteMessage = "Writing water is not allowed. Open Apple Health → profile → Apps and Services → OpenBottle to change access. Body values can still be used when available."
                 container.debugLog.log("ui", "apple health water write permission missing")
                 return
             }

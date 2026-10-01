@@ -4,7 +4,7 @@ import Foundation
 nonisolated struct DisallowedCommandError: Error, Equatable, CustomStringConvertible {
     let typeName: String
 
-    var description: String { "Request '\(typeName)' is not in the HydroCap command allowlist" }
+    var description: String { "Request '\(typeName)' is not in the OpenBottle command allowlist" }
 }
 
 /// A decoded `Any` payload of a response envelope.

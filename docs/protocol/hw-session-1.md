@@ -18,7 +18,7 @@ Sanitized observations from an owner-authorized BRITA LARQ iQ cap test. This doc
 - Device Information, Battery Service, and Nordic UART characteristics matched the protocol specification.
 - NUS RX supported write and write-without-response; NUS TX supported notifications. Writes with response worked on the tested cap.
 - Manufacturer/model strings identified the LARQ CAP family. Battery Level `0x2A19` was readable and notifiable without a bonding workflow.
-- A DFU service was observed but never used by HydroCap.
+- A DFU service was observed but never used by OpenBottle.
 - Request IDs were echoed correctly. Ordinary replies were fast, while an on-demand ToF measurement could take longer; fixed timing is not guaranteed.
 
 ## Interface behavior `[HW]`

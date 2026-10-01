@@ -1,8 +1,8 @@
-# Original HydroCap bottle mark
+# Original OpenBottle bottle mark
 
 ## Provenance
 
-`hydrocap-bottle.svg` is the editable master. Its geometry was independently authored for HydroCap, using manually chosen cubic Bézier paths rather than a stock symbol, font glyph, traced image, vendor silhouette or generated derivative of the previous icon. The previous PNGs were not used as rendering inputs or inspected as design templates.
+`hydrocap-bottle.svg` is the editable master. Its geometry was independently authored for OpenBottle, using manually chosen cubic Bézier paths rather than a stock symbol, font glyph, traced image, vendor silhouette or generated derivative of the previous icon. The previous PNGs were not used as rendering inputs or inspected as design templates.
 
 Distinctive construction:
 - A short neck offset to the right of the body centre.
@@ -15,7 +15,7 @@ The generic idea of a blue water bottle is retained; the paths, proportions and 
 
 ## License
 
-This original artwork and its generated HydroCap rasters are covered by the repository's **PolyForm Noncommercial 1.0.0** license; see [`../../LICENSE`](../../LICENSE). The repository owner maintains the canonical license and notices. No separate permissive artwork grant is made here.
+This original artwork and its generated OpenBottle rasters are covered by the repository's **PolyForm Noncommercial 1.0.0** license; see [`../../LICENSE`](../../LICENSE). The repository owner maintains the canonical license and notices. No separate permissive artwork grant is made here.
 
 ## Reproduction
 

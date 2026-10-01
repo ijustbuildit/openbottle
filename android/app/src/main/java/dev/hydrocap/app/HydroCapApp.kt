@@ -26,7 +26,7 @@ class HydroCapApp : Application(), Configuration.Provider {
         container = AppContainer(this)
         container.batteryNotifier.ensureChannel()
         container.drinkReminders.ensureChannel()
-        container.debugLog.log("app", "HydroCap ${BuildConfig.VERSION_NAME} (${BuildConfig.BUILD_TYPE}) started")
+        container.debugLog.log("app", "OpenBottle ${BuildConfig.VERSION_NAME} (${BuildConfig.BUILD_TYPE}) started")
         container.appScope.launch {
             val settings = container.settings.current()
             container.refreshHealthBody()

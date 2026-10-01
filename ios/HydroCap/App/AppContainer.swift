@@ -90,7 +90,7 @@ final class AppContainer {
         syncEngine.onRingHoursRead = { [weak drinkReminders] in
             drinkReminders?.replanSoon()
         }
-        debugLog.log("app", "HydroCap \(Self.version) started (local-only, no networking)")
+        debugLog.log("app", "OpenBottle \(Self.version) started (local-only, no networking)")
     }
 
     /// Register background work once. An unpaired app leaves Bluetooth startup

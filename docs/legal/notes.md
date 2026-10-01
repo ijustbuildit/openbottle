@@ -2,7 +2,7 @@
 
 This is a project policy and source register, not legal advice or a legal clearance certificate.
 
-HydroCap is an independently written local interoperability client. Vendor binaries, decompiled source, vendor schema files, screenshots, credentials, and private captures are not distributed as project source. Protocol identifiers and wire fields are documented only where relevant to interoperability; no vendor cloud access is implemented.
+OpenBottle is an independently written local interoperability client. Vendor binaries, decompiled source, vendor schema files, screenshots, credentials, and private captures are not distributed as project source. Protocol identifiers and wire fields are documented only where relevant to interoperability; no vendor cloud access is implemented.
 
 ## Project rules
 
@@ -10,7 +10,7 @@ HydroCap is an independently written local interoperability client. Vendor binar
 2. Keep hardware identifiers and personal measurements out of examples. Use explicitly generated synthetic protocol fixtures and sanitized scientific calibration observations.
 3. Use original branding. BRITA/LARQ names identify compatible hardware only; no affiliation, endorsement, or trademark license is claimed.
 4. Keep the enforced safe command scope: clock sync, reminder settings, and quiet hours are the only cap-setting write classes. No firmware update, reset, UV control, or cap-calibration path is provided.
-5. Preserve third-party notices and license terms. HydroCap's project license does not replace dependency licenses.
+5. Preserve third-party notices and license terms. OpenBottle's project license does not replace dependency licenses.
 6. Use independently authored bottle artwork for app icons and Android artwork. Apple's SF Symbols are not licensed for app icons/logos or their confusingly similar substitutes. System symbols used within the native iOS UI are a separate platform-use context.
 
 ## Relevant sources and qualifications

@@ -40,8 +40,8 @@ fun OnboardingScreen(body: HealthBodyState, busy: Boolean, onHealth: () -> Unit,
             Spacer(Modifier.height(24.dp))
             HydroIcon(HydroGlyph.BOTTLE, Modifier.size(64.dp))
             Text("Track your bottle", style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold)
-            Text("HydroCap reads your LARQ iQ cap and can write drinks to Health Connect. Available weight helps estimate an editable daily drink goal.", color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Text("No HydroCap account or server. Health Connect follows your system settings.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text("OpenBottle reads your LARQ iQ cap and can write drinks to Health Connect. Available weight helps estimate an editable daily drink goal.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text("No OpenBottle account or server. Health Connect follows your system settings.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text("The cap needs no pairing code.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (body.availability != HealthConnectSupport.Availability.AVAILABLE) Text(if (body.availability == HealthConnectSupport.Availability.UPDATE_REQUIRED) "Health Connect needs an update. You can continue without it." else "Health Connect is not available here. You can continue without it.", style = MaterialTheme.typography.bodySmall)
         }

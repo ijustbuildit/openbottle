@@ -1,4 +1,4 @@
-# HydroCap iOS — XcodeGen project definition.
+# OpenBottle iOS — XcodeGen project definition.
 #
 # Generate with:  cd ios && xcodegen generate
 #
@@ -58,7 +58,7 @@ targets:
         ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS: NO
         # Original bottle artwork; portable rendering tools are under tools/.
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        INFOPLIST_KEY_CFBundleDisplayName: HydroCap
+        INFOPLIST_KEY_CFBundleDisplayName: OpenBottle
 
   HydroCapTests:
     type: bundle.unit-test

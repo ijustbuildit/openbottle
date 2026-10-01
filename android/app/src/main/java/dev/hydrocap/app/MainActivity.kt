@@ -148,7 +148,7 @@ class MainActivity : ComponentActivity() {
         try { startActivity(target) } catch (_: ActivityNotFoundException) { startActivity(Intent(Settings.ACTION_SETTINGS)) }
     }
     private fun copyDebugLog() {
-        (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(ClipData.newPlainText("HydroCap debug log",model.debugText()))
+        (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(ClipData.newPlainText("OpenBottle debug log",model.debugText()))
         Toast.makeText(this,R.string.debug_copied,Toast.LENGTH_SHORT).show()
     }
 }

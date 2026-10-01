@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
-  <title id="title">HydroCap — offset-neck wave bottle</title>
+  <title id="title">OpenBottle — offset-neck wave bottle</title>
   <desc id="desc">Original asymmetric blue bottle with a right-offset neck, rising slanted cap, broad tapered body and an enclosed negative-space water wave. Transparent canvas.</desc>
-  <metadata>Original HydroCap artwork. Independently constructed cubic Bezier geometry; no imported, traced or font-derived artwork. Licensed under the repository's PolyForm Noncommercial 1.0.0 license; see ../../LICENSE and PROVENANCE.md.</metadata>
+  <metadata>Original OpenBottle artwork. Independently constructed cubic Bezier geometry; no imported, traced or font-derived artwork. Licensed under the repository's PolyForm Noncommercial 1.0.0 license; see ../../LICENSE and PROVENANCE.md.</metadata>
   <g id="hydrocap-mark" fill="#3D9EFA">
     <!-- Detached, slanted closure: its neck is deliberately offset right. -->
     <path id="cap" d="M 522 175 L 633 150 C 646 147 657 154 660 166 L 666 191 C 668 200 663 207 654 209 L 534 236 C 525 238 518 233 516 224 L 509 197 C 506 185 511 178 522 175 Z"/>
